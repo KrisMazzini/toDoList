@@ -31,15 +31,15 @@
 
 body {
     background-color: var(--gray-600);
-    color: var(--gray-100);
     -webkit-font-smoothing: antialiased;
 }
 
 body, input, button {
     font-family: 'Inter', sans-serif;
-    line-height: 140%;
     font-size: var(--font-lg);
     font-weight: var(--font-regular);
+    line-height: 1.4;
+    color: var(--gray-100);
 }
 
 img {
