@@ -15,6 +15,11 @@ export function AddTask({setTasks}:Props) {
 
     const disableButton = !newTaskDescription.length
 
+    function focusOnInput() {
+        const input = document.querySelector(`.${styles.form} input`) as HTMLInputElement
+        input?.focus()
+    }
+
     function handleAddNewTask(event:FormEvent) {
         event.preventDefault()
 
@@ -27,6 +32,8 @@ export function AddTask({setTasks}:Props) {
 
         setTasks(prevTasks => [...prevTasks, newTask])
         setNewTaskDescription('')
+
+        focusOnInput()
     }
 
     function handleChangeInput(event:ChangeEvent<HTMLInputElement>) {
