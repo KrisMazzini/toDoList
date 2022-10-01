@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+    
+    padding: 1rem;
+    border: 1px solid var(--gray-400);
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.6);
+
+    background-color: var(--gray-500);
+}
+
+.button {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+
+    cursor: pointer;
+
+    background: transparent;
+}
+
+.trashButton {
+    color: var(--gray-300);
+}
+
+.trashButton:hover {
+    color: var(--danger);
+}
+
+.description {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.container p {
+    word-break: break-word;
+    font-size: var(--font-md);
+}
+
+.checkedParagraph {
+    color: var(--gray-300);
+    text-decoration: line-through;
+}
