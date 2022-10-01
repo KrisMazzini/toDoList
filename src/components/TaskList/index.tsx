@@ -3,6 +3,7 @@ import { Dispatch, SetStateAction } from 'react'
 import styles from './styles.module.css'
 
 import { Task, TaskProps } from '../Task'
+import { SummaryInfo } from '../SummaryInfo'
 
 interface Props {
     tasks: TaskProps[],
@@ -12,6 +13,15 @@ interface Props {
 export function TaskList({tasks, setTasks}:Props) {
 
     const sortedTasks = tasks.sort(sortTasks)
+
+    const numberOfTasks = tasks.length;
+    const numberOfCompletedTasks = tasks.filter(task => {
+        return task.checked
+    }).length
+
+    const completedPercentage = (
+        numberOfTasks === 0 ? 0 : (numberOfCompletedTasks / numberOfTasks) * 100
+    )
 
     function sortTasks(taskA:TaskProps, taskB:TaskProps) {
         const sameStatus = taskA.checked === taskB.checked
@@ -53,18 +63,38 @@ export function TaskList({tasks, setTasks}:Props) {
 
     return (
         <div className={styles.container}>
-            {
-                sortedTasks.map(task => {
-                    return (
-                        <Task
-                            {...task}
-                            key={task.id}
-                            deleteTask={deleteTask}
-                            toggleCheck={toggleCheck}
-                        />
-                    )
-                })
-            }
+            <div className={styles.summary}>
+                <SummaryInfo
+                    name='Created tasks'
+                    value={numberOfTasks}
+                    color='blue'
+                />
+                <SummaryInfo
+                    name="Done"
+                    value={`${numberOfCompletedTasks} of ${numberOfTasks}`}
+                    color= 'purple'
+                />
+            </div>
+            <div className={styles.progressBarContainer}>
+                <div
+                    className={styles.progressBar}
+                    style={{width: `${completedPercentage}%`}}
+                />
+            </div>
+            <div className={styles.tasks}>
+                {
+                    sortedTasks.map(task => {
+                        return (
+                            <Task
+                                {...task}
+                                key={task.id}
+                                deleteTask={deleteTask}
+                                toggleCheck={toggleCheck}
+                            />
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }
