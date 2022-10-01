@@ -4,6 +4,7 @@ import styles from './styles.module.css'
 
 import { Task, TaskProps } from '../Task'
 import { SummaryInfo } from '../SummaryInfo'
+import { NoTasks } from '../NoTasks'
 
 interface Props {
     tasks: TaskProps[],
@@ -81,20 +82,25 @@ export function TaskList({tasks, setTasks}:Props) {
                     style={{width: `${completedPercentage}%`}}
                 />
             </div>
-            <div className={styles.tasks}>
-                {
-                    sortedTasks.map(task => {
-                        return (
-                            <Task
-                                {...task}
-                                key={task.id}
-                                deleteTask={deleteTask}
-                                toggleCheck={toggleCheck}
-                            />
-                        )
-                    })
-                }
-            </div>
+
+            {
+                numberOfTasks > 0 ? (
+                    <div className={styles.tasks}>
+                        {
+                            sortedTasks.map(task => {
+                                return (
+                                    <Task
+                                        {...task}
+                                        key={task.id}
+                                        deleteTask={deleteTask}
+                                        toggleCheck={toggleCheck}
+                                    />
+                                )
+                            })
+                        }
+                    </div>
+                ) : <NoTasks />
+            }
         </div>
     )
 }
