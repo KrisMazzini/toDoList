@@ -42,7 +42,7 @@ body, input, button {
     color: var(--gray-100);
 }
 
-img {
+img, button {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
