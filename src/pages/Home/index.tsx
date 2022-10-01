@@ -26,12 +26,12 @@ export function Home() {
   ])
   
   return (
-    <>
+    <div>
       <Header />
       <main className={styles.main}>
         <AddTask setTasks={setTasks} />
         <TaskList tasks={tasks} setTasks={setTasks}/>
       </main>
-    </>
+    </div>
   )
 }
