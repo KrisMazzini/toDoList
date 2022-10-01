@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.container p {
+    font-size: var(--font-md);
+    font-weight: var(--font-bold);
+}
+
+.container span {
+    font-weight: var(--font-bold);
+    font-size: var(--font-sm);
+    
+    padding: 0.125rem 0.5rem;
+    border-radius: 999px;
+    
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+}
