@@ -1,25 +1,15 @@
-import { useState } from 'react'
-import { v4 as uuid } from 'uuid'
+import { Dispatch, SetStateAction } from 'react'
 
 import styles from './styles.module.css'
 
 import { Task, TaskProps } from '../Task'
 
-export function TaskList() {
-    const [tasks, setTasks] = useState<TaskProps[]>([
-        {
-            id: uuid(),
-            description: "Task 1",
-            checked: false,
-            createdAt: new Date("2022-08-09T09:23Z")
-        },
-        {
-            id: uuid(),
-            description: "Task 2",
-            checked: true,
-            createdAt: new Date("2022-09-29T23:13Z")
-        }
-    ])
+interface Props {
+    tasks: TaskProps[],
+    setTasks: Dispatch<SetStateAction<TaskProps[]>>,
+}
+
+export function TaskList({tasks, setTasks}:Props) {
 
     const sortedTasks = tasks.sort(sortTasks)
 
