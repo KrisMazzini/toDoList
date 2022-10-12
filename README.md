@@ -1,4 +1,12 @@
-# To-do list <img height=30 styles="margin-left: 5px;" alt="rocket-icon" src="https://res.cloudinary.com/dracqpyf4/image/upload/v1665536864/Projects/To%20Do%20List/rocket-logo_coxaub.svg" />
+<div styles="display: flex; align-items: center; justify-content: space-between;">
+    <h1>To-do List</h1>
+    <img 
+        height=30
+        styles="margin-left: 5px;"
+        alt="rocket-icon"
+        src="https://res.cloudinary.com/dracqpyf4/image/upload/v1665536864/Projects/To%20Do%20List/rocket-logo_coxaub.svg"
+    />
+</div>
 
 This application helps people to keep track of their tasks!
 
