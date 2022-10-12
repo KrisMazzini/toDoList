@@ -1,4 +1,4 @@
-# To-do list <img alt="rocket-icon" src="https://res.cloudinary.com/dracqpyf4/image/upload/v1665536864/Projects/To%20Do%20List/rocket-logo_coxaub.svg" />
+# To-do list <img height=20 alt="rocket-icon" src="https://res.cloudinary.com/dracqpyf4/image/upload/v1665536864/Projects/To%20Do%20List/rocket-logo_coxaub.svg" />
 
 This application helps people to keep track of their tasks!
 
@@ -10,7 +10,7 @@ This application helps people to keep track of their tasks!
 2. Once the task is finished, toggle the checkbox;
 3. If a task is no longer needed, simply delete it.
 
-![How it works](https://res.cloudinary.com/dracqpyf4/video/upload/v1665536780/Projects/To%20Do%20List/How_it_Works_fchkgh.mov)
+<video src="https://res.cloudinary.com/dracqpyf4/video/upload/v1665536780/Projects/To%20Do%20List/How_it_Works_fchkgh.mov"></video>
 
 ## How to run
 
