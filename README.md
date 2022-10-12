@@ -1,5 +1,5 @@
 <div style="display: flex; align-items: center; justify-content: space-between;">
-    <h1>To-do List</h1>
+    <p style="font-weight: bold; font-size: 2rem;">To-do List</p>
     <img 
         height=30
         style="margin-left: 5px;"
